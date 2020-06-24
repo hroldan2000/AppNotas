@@ -4,13 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AppGitNotas.MainPage">
+             x:Class="AppGitNotas.MainPage" Title="Notas">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label Text="Notas" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Editor x:Name="txtEditor" Placeholder="Escriba su Nota"  HeightRequest="100"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Button x:Name="btnGrabar" Text="Grabar" Grid.Column="0" Clicked="btnGrabar_Clicked"/>
+        <Button x:Name="btnEliminar" Text="Eliminar" Grid.Column="1" Clicked="btnEliminar_Clicked"/>
+
+
     </StackLayout>
 
 </ContentPage>
