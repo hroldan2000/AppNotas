@@ -8,6 +8,7 @@
 
     <StackLayout>
         <Label Text="Notas" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Label Text="------" HorizontalOptions="Center" FontAttributes="Bold"/>
         <Editor x:Name="txtEditor" Placeholder="Escriba su Nota"  HeightRequest="100"/>
         <Grid>
             <Grid.ColumnDefinitions>
